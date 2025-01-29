@@ -13,17 +13,15 @@ def main():
     for event in pygame.event.get():
       if event.type == pygame.QUIT:
         return
+
+    player.update(dt)
       
     screen.fill(color="black")
-    player.draw(screen)
+    player.draw(screen)    
     pygame.display.flip()
     
-    dt = clock.tick(60) / 1000
-    
-    
-  print("Starting asteroids!")
-  print(f"Screen width: {SCREEN_WIDTH}")
-  print(f"Screen height: {SCREEN_HEIGHT}")
+    dt = clock.tick(60) / 1000     
+  
 
 
 if __name__ == "__main__":
